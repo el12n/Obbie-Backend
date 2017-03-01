@@ -1,7 +1,20 @@
 package obbie.backend.domains
 
-class Turn {
+import org.grails.datastore.gorm.GormEntity
+
+class Turn implements GormEntity<Turn> {
+
+    Barber barber
+    Client client
+
+    Date dateTimeIn
+    Date dateTimeOut
+    Boolean isApproved
+    String status
 
     static constraints = {
+        status blank: false
+        dateTimeIn blank: false
+        dateTimeOut blank: false
     }
 }
