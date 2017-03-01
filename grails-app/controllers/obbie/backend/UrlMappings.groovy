@@ -12,6 +12,7 @@ class UrlMappings {
 
         "/users"(resources: "user")
         "/barberShops"(resources: "barbershop")
+        "/turns"(resources: "turn")
 
         "/"(controller: 'application', action: 'index')
         "500"(view: '/error')
