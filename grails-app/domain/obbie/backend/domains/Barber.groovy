@@ -5,8 +5,8 @@ import org.grails.datastore.gorm.GormEntity
 class Barber extends User implements GormEntity<Barber> {
 
     Boolean isWorking
-    Turn turn
 
+    static hasOne = [turn: Turn]
     static belongsTo = BarberShop
 
     static constraints = {

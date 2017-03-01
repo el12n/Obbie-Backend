@@ -4,7 +4,7 @@ import org.grails.datastore.gorm.GormEntity
 
 class Client extends User implements GormEntity<Client> {
 
-    Turn turn
+    static hasOne = [turn: Turn]
 
     static constraints = {
     }
