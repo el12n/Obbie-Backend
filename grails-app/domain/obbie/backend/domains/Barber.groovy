@@ -6,6 +6,8 @@ class Barber extends User implements GormEntity<Barber> {
 
     Boolean isWorking
 
+    static belongsTo = BarberShop
+
     static constraints = {
     }
 }

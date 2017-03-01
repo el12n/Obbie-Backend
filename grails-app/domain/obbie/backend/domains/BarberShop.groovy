@@ -2,7 +2,7 @@ package obbie.backend.domains
 
 import org.grails.datastore.gorm.GormEntity
 
-class BarberShop implements GormEntity<BarberShop>{
+class BarberShop implements GormEntity<BarberShop> {
 
     String name
     String barberShopIdentifier
@@ -12,9 +12,11 @@ class BarberShop implements GormEntity<BarberShop>{
     boolean isAvailable
     String imgSrc
 
+    static hasMany = [barbers: Barber]
+
     static constraints = {
         name(blank: false, size: 5..40)
-        barberShopIdentifier(blank: false, size: 5..10)
+        barberShopIdentifier(blank: false, size: 5..10, unique: true)
         phone(matches: '\\d{3}-\\d{3}-\\d{4}')
         latitude(blank: false)
         longitude(blank: false)
