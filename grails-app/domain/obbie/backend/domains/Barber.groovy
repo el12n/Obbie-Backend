@@ -10,6 +10,10 @@ class Barber extends User implements GormEntity<Barber> {
     static belongsTo = Barbershop
 
     static constraints = {
-        isWorking default: false
     }
+
+    static mapping = {
+        isWorking defaultValue: false
+    }
+
 }

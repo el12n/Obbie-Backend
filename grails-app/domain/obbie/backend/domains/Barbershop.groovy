@@ -18,9 +18,13 @@ class Barbershop implements GormEntity<Barbershop> {
         name(blank: false, size: 5..40)
         barberShopIdentifier(blank: false, size: 5..10, unique: true)
         phone(matches: '\\d{3}-\\d{3}-\\d{4}')
-        isAvailable(default: false)
         latitude(nullable: true)
         longitude(nullable: true)
         imgSrc(nullable: true)
+    }
+
+    static mapping = {
+        isAvailable defaultValue: false
+        barbers lazy: false
     }
 }

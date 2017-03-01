@@ -17,4 +17,9 @@ class Turn implements GormEntity<Turn> {
         dateTimeIn blank: false
         dateTimeOut blank: false
     }
+
+    static mapping = {
+        dateTimeIn defaultValue: new Date()
+        isApproved defaultValue: false
+    }
 }
