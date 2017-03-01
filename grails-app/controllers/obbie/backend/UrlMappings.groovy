@@ -11,7 +11,7 @@ class UrlMappings {
         patch "/$controller/$id(.$format)?"(action: "patch")
 
         "/users"(resources: "user")
-        "/barberShops"(resources: "barbershop")
+        "/barbershops"(resources: "barbershop")
         "/clients"(resources: "client")
         "/turns"(resources: "turn")
 

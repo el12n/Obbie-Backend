@@ -1,13 +1,13 @@
-package obbie.backend.domains
+package obbie.backend.controllers
 
 import grails.test.mixin.TestFor
 import spock.lang.Specification
 
 /**
- * See the API for {@link grails.test.mixin.domain.DomainClassUnitTestMixin} for usage instructions
+ * See the API for {@link grails.test.mixin.web.ControllerUnitTestMixin} for usage instructions
  */
-@TestFor(BarberShop)
-class BarberShopSpec extends Specification {
+@TestFor(BarbershopController)
+class BarbershopControllerSpec extends Specification {
 
     def setup() {
     }
