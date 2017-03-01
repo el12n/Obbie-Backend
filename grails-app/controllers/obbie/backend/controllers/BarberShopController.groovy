@@ -1,9 +1,10 @@
 package obbie.backend.controllers
 
 import grails.rest.*
-import grails.converters.*
+import obbie.backend.domains.BarberShop
 
-class BarberShopController {
+class BarberShopController extends RestfulController {
+
 	static responseFormats = ['json', 'xml']
 
     BarberShopController() {
