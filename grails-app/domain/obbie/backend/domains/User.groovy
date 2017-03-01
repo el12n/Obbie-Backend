@@ -13,12 +13,12 @@ class User implements GormEntity<User> {
     String imgSrc
 
     static constraints = {
-        firstName(blank: false, lenght: 40)
-        lastName(blank: false, lenght: 40)
+        firstName(blank: false, size: 5..40)
+        lastName(blank: false, size: 5..40)
         identification(blank: false, lenght: 11, unique: true)
-        phone(blank: false, lenght: 15)
-        email(blank: false, lenght: 100)
-        password(blank: false, lenght: 32)
+        phone(matches: '\\d{3}-\\d{3}-\\d{4}')
+        email(email: true, size: 8..100)
+        password(blank: false, size: 6..32)
         imgSrc(blank: false)
     }
 }
